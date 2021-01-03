@@ -1,10 +1,10 @@
 //
 import UIKit
-import AVFoundation
+import AVFoundation //Importing AVFoundion
 
 class ViewController: UIViewController {
     
-    var player: AVAudioPlayer!
+    var player: AVAudioPlayer! //Adding the AVAudioPlayer Class
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +21,9 @@ class ViewController: UIViewController {
              sender.alpha = 1.0
          }
     }
-
+        
     func playSound(soundName: String) {
-        let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
+        let url = Bundle.main.url(forResource: soundName, withExtension: "wav") //Function to play sound in sound folder
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
                 
